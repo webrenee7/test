@@ -31,19 +31,15 @@
     </div>
     <div class="cover_box"></div>
     <div class="pop_box"></div>
-    <script type="text/javascript">
-        $(function () {
-            $('.pop_box').each(function () {
-                new RTP.PinchZoom($(this), {});
-            });
-        })
-    </script>
     <script>
 		//放大图片
 		$(".magnify").click(function(){
 			//console.log($(this).index()+1);
 			$(".cover_box").show();	
 			$(".pop_box").append("<img src='res/images/pic"+($(this).index()+1)+".jpg'/>");
+			$('.pop_box').each(function () {
+                new RTP.PinchZoom($(this), {});
+            });
 		});
 		$(".pop_box").click(function(){
 			$(".cover_box").hide();	
