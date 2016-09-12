@@ -15,4 +15,4 @@ input,select{ -webkit-appearance:none; border:medium none; background:none; outl
 .num_box p span{ color:#ff6600; margin-left:7px;}
 .num_box a{ float:left; display:block; width:60px; height:60px; background:url(../images/like.png) no-repeat; -webkit-background-size:100% 100%; color:#fff; line-height:35px;}
 .cover_box{ position:fixed; top:0; left:0; z-index:100; display:none; width:100%; height:100%; background:rgba(0,0,0,0.8);}
-.pop_box{ position:fixed; z-index:100; width:100%; top:50%;}
+.pop_box{ position:absolute; z-index:100; width:100%; top:50%;}
