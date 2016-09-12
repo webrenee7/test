@@ -31,6 +31,13 @@
     </div>
     <div class="cover_box"></div>
     <div class="pop_box"></div>
+    <script type="text/javascript">
+        $(function () {
+            $('.pop_box').each(function () {
+                new RTP.PinchZoom($(this), {});
+            });
+        })
+    </script>
     <script>
 		//放大图片
 		$(".magnify").click(function(){
@@ -44,12 +51,5 @@
 		});
 	</script>
     
-    <script type="text/javascript">
-        $(function () {
-            $('.img_box').each(function () {
-                new RTP.PinchZoom($(this), {});
-            });
-        })
-    </script>
 </body>
 </html>
