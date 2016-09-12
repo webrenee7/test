@@ -503,8 +503,7 @@
                     '-moz-transform-origin': '0% 0%',
                     '-ms-transform-origin': '0% 0%',
                     '-o-transform-origin': '0% 0%',
-                    'transform-origin': '0% 0%',
-                    'position': 'absolute'
+                    'transform-origin': '0% 0%'
                 });
             },
 
