@@ -3,14 +3,53 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
 <title>index</title>
 <link rel="stylesheet" type="text/css" href="res/css/mobile.css" />
- 
+<script type="text/javascript" src="res/js/jquery-1.7.js"></script>
+<script type="text/javascript" src="res/js/pinchzoom.js"></script>
 </head>
 <body>
-  <div class="img_box">
-  	<img src="res/images/1.jpg" />
-    <img src="res/images/2.jpg" />
-  </div>
+	<div class="img_box">
+    	<img src="res/images/1.jpg" />
+        <img src="res/images/2.jpg" />
+        <a href=""><img src="res/images/3.jpg" /></a>
+        <img src="res/images/4.jpg" />
+        <img src="res/images/5.jpg" />
+        <img src="res/images/6.jpg" class="magnify" />
+        <img src="res/images/7.jpg" />
+        <img src="res/images/8.jpg" class="magnify" />
+        <img src="res/images/9.jpg" />
+        <img src="res/images/10.jpg" class="magnify" />
+        <img src="res/images/11.jpg" />
+    </div>
+    <div class="cont_box">
+        <div class="num_box">
+            <p>浏览<span>124</span></p>
+            <a href="">325</a>
+        </div>
+    </div>
+    <div class="cover_box"></div>
+    <div class="pop_box"></div>
+    <script>
+		//放大图片
+		$(".magnify").click(function(){
+			//console.log($(this).index()+1);
+			$(".cover_box").show();	
+			$(".pop_box").append("<img src='res/images/pic"+($(this).index()+1)+".jpg'/>");
+		});
+		$(".pop_box").click(function(){
+			$(".cover_box").hide();	
+			$(this).html('');
+		});
+	</script>
+    
+    <script type="text/javascript">
+        $(function () {
+            $('.pop_box img').each(function () {
+                new RTP.PinchZoom($(this), {});
+            });
+        })
+    </script>
 </body>
 </html>
