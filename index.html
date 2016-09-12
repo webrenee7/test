@@ -34,11 +34,11 @@
     <script>
 		//放大图片
 		$(".magnify").click(function(){
-			//console.log($(this).index()+1);
 			$(".cover_box").show();	
 			$(".pop_box").append("<img src='res/images/pic"+($(this).index()+1)+".jpg'/>");
-			$('.pop_box').each(function () {
-                new RTP.PinchZoom($(this), {});
+			$(".pop_box").css({"margin-top":-$(this).height()/2});
+			$('.pop_box').each(function(){
+                new RTP.PinchZoom($(this),{});
             });
 		});
 		$(".pop_box").click(function(){
