@@ -481,7 +481,7 @@
             },
 
             setContainerY: function (y) {
-                return this.container.height(y);
+                return this.container.height("100%");
             },
 
             /**
@@ -493,8 +493,11 @@
                 this.container.append(this.el);
 
                 this.container.css({
-                    'overflow': 'hidden',
-                    'position': 'relative'
+                    'position': 'fixed',
+					'width':'100%',
+					'z-index':101,
+					'top':'0',
+					'overflow': 'hidden',
                 });
 
                 // Zepto doesn't recognize `webkitTransform..` style
@@ -503,7 +506,7 @@
                     '-moz-transform-origin': '0% 0%',
                     '-ms-transform-origin': '0% 0%',
                     '-o-transform-origin': '0% 0%',
-                    'transform-origin': '0% 0%'
+                    'transform-origin': '0% 0%',
                 });
             },
 
